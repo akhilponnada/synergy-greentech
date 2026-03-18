@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@theme {
+  --font-display: "Outfit", sans-serif;
+  --font-body: "Outfit", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #fafbfc;
+    color: #1e293b;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+
+  p {
+    max-width: 68ch;
+  }
+
+  ::selection {
+    background-color: #d1fae5;
+    color: #065f46;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-24 md:py-36;
+  }
+
+  .container-main {
+    @apply max-w-[1280px] mx-auto px-6 md:px-10;
+  }
+}
