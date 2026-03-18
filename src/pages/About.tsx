@@ -39,10 +39,10 @@ export default function About() {
                 Over the years that followed, we expanded methodically. We added onshore wind to our capabilities. We developed in-house battery storage engineering. We built a sustainability consulting practice staffed by former chief sustainability officers from Fortune 500 companies. At every stage, we invested in deepening our own technical capacity rather than outsourcing to third parties.
               </p>
               <p>
-                Today, Synergy Greentech operates across multiple continents with a combined installed capacity exceeding 4.8 gigawatts. We maintain full-time offices, engineering teams, and construction crews in every market we serve. We employ over 2,400 people — the majority of whom are engineers, project managers, and skilled tradespeople who spend their days on construction sites, not in marketing departments.
+                Today, Synergy Greentech is a growing company with ambitious plans to expand across multiple markets. We maintain dedicated engineering teams and construction crews in every region we serve. Our team is composed primarily of engineers, project managers, and skilled tradespeople who spend their days on construction sites, not in marketing departments.
               </p>
               <p>
-                Our strategic backing by <strong className="text-emerald-600 font-bold">Unite Group, Inc.</strong> provides access to a $1.4 billion global procurement network. This affiliation is not cosmetic branding — it is the backbone of our competitive advantage. Unite Group's relationships with Tier 1 equipment manufacturers across 38 countries allow us to source solar panels, wind turbines, inverters, transformers, and cables at institutional volumes and pricing that independent developers cannot access. We pass these savings directly to our clients.
+                We are powered by <strong className="text-emerald-600 font-bold">Unite Group, Inc.</strong> — professionals with over 30 years of hands-on experience in energy infrastructure, international procurement, and large-scale project delivery. Unite Group's deep industry relationships with Tier 1 equipment manufacturers allow us to source solar panels, wind turbines, inverters, transformers, and cables at competitive volumes and pricing. We pass these savings directly to our clients.
               </p>
             </div>
           </motion.div>
@@ -53,12 +53,12 @@ export default function About() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                <p className="text-3xl font-bold text-slate-900 tracking-tight mb-1">2,400+</p>
-                <p className="text-sm text-slate-500 font-medium">Full-time employees</p>
+                <p className="text-3xl font-bold text-slate-900 tracking-tight mb-1">30+</p>
+                <p className="text-sm text-slate-500 font-medium">Years of combined expertise</p>
               </div>
               <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                <p className="text-3xl font-bold text-emerald-600 tracking-tight mb-1">4.8 GW</p>
-                <p className="text-sm text-slate-500 font-medium">Installed capacity</p>
+                <p className="text-3xl font-bold text-emerald-600 tracking-tight mb-1">Tier 1</p>
+                <p className="text-sm text-slate-500 font-medium">Equipment partners</p>
               </div>
             </div>
           </motion.div>

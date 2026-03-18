@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, SolarPanel, Wind, Leaf, Lightning, Buildings, ChartLineUp, ShieldCheck, Handshake, Globe } from '@phosphor-icons/react';
+import { ArrowRight, SolarPanel, Leaf, Lightning, Buildings, ChartLineUp, ShieldCheck, Handshake, Globe, Factory, TreeStructure } from '@phosphor-icons/react';
 import { Link } from 'react-router-dom';
 
 const fade = {
@@ -35,7 +35,7 @@ export default function Home() {
           >
             <motion.div variants={fade} custom={0} className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 text-emerald-300 rounded-full px-4 py-1.5 text-xs font-semibold tracking-wide uppercase mb-8 w-max">
               <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-              Trusted by over 200 enterprises globally
+              Backed by 30+ years of industry expertise
             </motion.div>
 
             <motion.h1 variants={fade} custom={1} className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.08] mb-8">
@@ -77,7 +77,7 @@ export default function Home() {
               transition={{ type: 'spring', stiffness: 80, damping: 18 }}
               className="text-2xl md:text-3xl text-slate-700 leading-relaxed font-medium tracking-tight"
             >
-              The planet does not have a technology problem — it has an execution problem. Every year, billions of dollars worth of clean energy capacity remains unbuilt because developers, governments, and corporations lack the engineering precision to deliver at scale. Synergy Greentech exists to close that gap. We combine deep technical capability with the global procurement network of <span className="text-emerald-600 font-bold">Unite Group, Inc.</span> to execute renewable projects that actually get finished — on time, on budget, and to specification.
+              The planet does not have a technology problem — it has an execution problem. Every year, billions of dollars worth of clean energy capacity remains unbuilt because developers, governments, and corporations lack the engineering precision to deliver at scale. Synergy Greentech exists to close that gap. We combine deep technical capability with the 30+ years of industry expertise behind <span className="text-emerald-600 font-bold">Unite Group, Inc.</span> to execute renewable projects that actually get finished — on time, on budget, and to specification.
             </motion.p>
           </div>
         </div>
@@ -94,18 +94,20 @@ export default function Home() {
             className="mb-20"
           >
             <p className="text-sm font-semibold uppercase tracking-widest text-emerald-600 mb-3">What we do</p>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6">End-to-end clean energy infrastructure</h2>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6">Complete green power solutions</h2>
             <p className="text-lg text-slate-600 leading-relaxed max-w-3xl">
-              From initial site assessment and environmental impact studies through procurement, construction, grid connection, and long-term asset management — we handle every stage of the renewable energy lifecycle so your organisation never has to.
+              From rooftop installations to utility-scale solar parks, from zero-investment PPA models to BOOT structures — we deliver full-cycle renewable energy solutions tailored to every scale and budget.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { Icon: SolarPanel, title: 'Utility-scale solar EPC', color: 'bg-amber-50 text-amber-600', body: 'Full turnkey delivery of ground-mount and rooftop photovoltaic plants ranging from 1 MW to 500 MW. We handle everything from land acquisition and permitting to panel procurement, inverter configuration, and high-voltage grid interconnection. Every installation uses Tier 1 monocrystalline PERC or TOPCon cell technology, backed by 25-year linear performance guarantees.' },
-              { Icon: Wind, title: 'Onshore wind development', color: 'bg-sky-50 text-sky-600', body: 'Site prospecting, micrositing, foundation engineering, turbine erection, and commissioning for onshore wind farms up to 300 MW. We work with leading OEMs including Vestas, Siemens Gamesa, and Goldwind. Our in-house meteorological team conducts 12-month wind resource campaigns to maximise capacity factors before a single foundation is poured.' },
-              { Icon: Lightning, title: 'Battery energy storage', color: 'bg-violet-50 text-violet-600', body: 'Industrial lithium-ion and flow battery systems designed for peak shaving, frequency regulation, and grid arbitrage. Our storage solutions are co-located with generation assets or deployed standalone to solve the intermittency problem permanently. We size, engineer, and commission storage from 500 kWh to 200 MWh.' },
-              { Icon: Leaf, title: 'Sustainability consulting', color: 'bg-emerald-50 text-emerald-600', body: 'Comprehensive carbon auditing, science-based target setting, ESG reporting frameworks, and net-zero roadmap development for enterprises that need to move beyond vague pledges. Our consulting division works exclusively with C-suite leadership to embed sustainability into corporate strategy — not just marketing collateral.' },
+              { Icon: SolarPanel, title: 'Solar turnkey solutions', color: 'bg-amber-50 text-amber-600', body: 'End-to-end solar project execution — rooftop, ground-mounted, hybrid, and off-grid. Multi-brand Tier 1 equipment, 25-year warranties, and zero-investment financing options available.' },
+              { Icon: Factory, title: 'Captive & group captive', color: 'bg-violet-50 text-violet-600', body: 'Ownership-based power models that reduce DISCOM dependency. Industries invest together for long-term, low-cost power with ROI in 4 years and 25 years of free power.' },
+              { Icon: Handshake, title: 'PPA — zero investment', color: 'bg-orange-50 text-orange-600', body: 'We install, own, and operate the plant at our cost. You pay only for the power consumed at below-grid rates. Zero capital expenditure required.' },
+              { Icon: TreeStructure, title: 'BOOT model', color: 'bg-teal-50 text-teal-600', body: 'Build, own, operate, and transfer. Solar parks and large installations under long-term concession — the path from energy consumer to energy asset owner.' },
+              { Icon: Lightning, title: 'Hybrid energy', color: 'bg-indigo-50 text-indigo-600', body: 'Solar + wind + battery storage integration for uninterrupted 24/7 clean power supply. Customised for each site, climate, and load profile.' },
+              { Icon: Leaf, title: 'Open access & more', color: 'bg-emerald-50 text-emerald-600', body: 'Direct clean energy supply through open access, rooftop leasing, Bio CNG plants, EPC services, and sustainability consulting — whatever your energy needs demand.' },
             ].map((s, i) => (
               <motion.div
                 key={s.title}
@@ -153,15 +155,15 @@ export default function Home() {
               Hundreds of companies claim to be green energy providers. What separates Synergy Greentech is our uncompromising focus on execution quality and vertical integration. We do not outsource critical engineering. We do not sub-contract procurement. Every watt of capacity we build is designed, sourced, installed, and commissioned by our own teams — giving our clients a single point of accountability from concept to commercial operation.
             </p>
             <p className="text-lg text-slate-600 leading-relaxed mb-10">
-              Our strategic affiliation with Unite Group, Inc. provides access to a $1.4 billion procurement network spanning 38 countries, enabling us to source Tier 1 equipment at volumes and prices that smaller developers simply cannot match. This cost advantage is passed directly to our clients, making industrial-grade clean energy both operationally superior and financially compelling.
+              We are powered by <strong className="text-emerald-600">Unite Group, Inc.</strong> — professionals with over 30 years of deep experience in energy infrastructure, procurement, and international project delivery. That expertise is the foundation of everything we do: sourcing Tier 1 equipment at competitive prices and executing projects with the precision of seasoned veterans.
             </p>
 
             <div className="grid grid-cols-2 gap-6">
               {[
-                { n: '200+', label: 'Enterprise clients' },
-                { n: '4.8 GW', label: 'Capacity deployed' },
-                { n: '38', label: 'Countries served' },
-                { n: '99.7%', label: 'Grid uptime' },
+                { n: '30+', label: 'Years of expertise' },
+                { n: 'EPC', label: 'Full-cycle delivery' },
+                { n: 'Tier 1', label: 'Equipment sourcing' },
+                { n: '24/7', label: 'Project support' },
               ].map((stat) => (
                 <div key={stat.label} className="bg-slate-50 p-5 rounded-xl border border-slate-100">
                   <p className="text-3xl font-bold text-slate-900 tracking-tight mb-1">{stat.n}</p>
@@ -208,7 +210,7 @@ export default function Home() {
             {[
               { Icon: ShieldCheck, title: 'Engineering rigour', body: 'Every structural calculation, electrical schematic, and geotechnical report is peer-reviewed by a second licensed engineer before it leaves our office. We treat engineering mistakes the way hospitals treat surgical errors — as unacceptable.' },
               { Icon: Handshake, title: 'Transparent partnerships', body: 'We publish real-time project dashboards for every client showing cost tracking, schedule performance, equipment deliveries, and safety metrics. There are no hidden margins, no surprise change orders, and no information asymmetry.' },
-              { Icon: Globe, title: 'Global procurement reach', body: 'Through our affiliation with Unite Group, Inc., we access a worldwide network of vetted manufacturers. This allows us to source panels, inverters, transformers, and cables at institutional pricing — then pass those savings directly to clients.' },
+              { Icon: Globe, title: 'Global procurement reach', body: 'Through our affiliation with Unite Group, Inc. — a team of professionals with 30+ years of industry relationships — we access a vetted network of manufacturers. This allows us to source panels, inverters, transformers, and cables at competitive pricing, then pass those savings directly to clients.' },
               { Icon: Buildings, title: 'Local execution intelligence', body: 'We maintain permanent offices and construction crews in every market we operate in. Local knowledge — from soil conditions to utility regulations — prevents the costly surprises that plague foreign developers parachuting into new territories.' },
               { Icon: SolarPanel, title: 'Technology neutrality', body: 'We are not locked into any single equipment vendor. We evaluate panels, inverters, and storage systems on a project-by-project basis using independently verified performance data, selecting the optimal technology stack for each specific site and climate.' },
               { Icon: ChartLineUp, title: 'Measurable outcomes', body: 'We guarantee performance ratios, capacity factors, and energy yield using P50/P90 probabilistic modelling validated by third-party independent engineers. If a plant underperforms our contractual commitments, we bear the financial consequences.' },
