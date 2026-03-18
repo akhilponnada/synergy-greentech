@@ -26,14 +26,14 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-500 bg-white ${
+        className={`fixed top-0 w-full z-50 transition-all duration-500 ${
           scrolled
-            ? 'shadow-[0_1px_3px_rgba(0,0,0,0.06)] py-3'
-            : 'shadow-[0_1px_2px_rgba(0,0,0,0.03)] py-4'
+            ? 'bg-white/95 backdrop-blur-xl shadow-[0_1px_3px_rgba(0,0,0,0.06)] py-3'
+            : 'bg-transparent py-5'
         }`}
       >
         <div className="container-main flex items-center justify-between">
-          {/* Logo only — the image already contains company name and "Powered by Unite Group" */}
+          {/* Logo — white when at top (over hero), normal when scrolled */}
           <Link to="/" className="shrink-0">
             <motion.img
               whileHover={{ scale: 1.03 }}
@@ -41,7 +41,9 @@ export default function Navbar() {
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
               src="/synergy.png"
               alt="Synergy Greentech Projects Private Limited — Powered by Unite Group, Inc."
-              className="h-16 md:h-20 w-auto object-contain"
+              className={`h-16 md:h-20 w-auto object-contain transition-all duration-500 ${
+                scrolled ? '' : 'brightness-0 invert'
+              }`}
             />
           </Link>
 
@@ -51,10 +53,10 @@ export default function Navbar() {
               <Link
                 key={l.path}
                 to={l.path}
-                className={`text-[15px] font-medium transition-colors duration-200 ${
+                className={`text-[15px] font-medium transition-colors duration-300 ${
                   location.pathname === l.path
-                    ? 'text-emerald-600'
-                    : 'text-slate-500 hover:text-slate-900'
+                    ? scrolled ? 'text-emerald-600' : 'text-white'
+                    : scrolled ? 'text-slate-500 hover:text-slate-900' : 'text-white/80 hover:text-white'
                 }`}
               >
                 {l.name}
@@ -64,7 +66,11 @@ export default function Navbar() {
               <motion.button
                 whileHover={{ y: -1 }}
                 whileTap={{ scale: 0.97 }}
-                className="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-6 py-2.5 rounded-lg shadow-md shadow-emerald-600/20 transition-colors"
+                className={`text-sm font-semibold px-6 py-2.5 rounded-lg shadow-md transition-colors ${
+                  scrolled
+                    ? 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-600/20'
+                    : 'bg-white hover:bg-white/90 text-emerald-700 shadow-white/20'
+                }`}
               >
                 Request a Quote
               </motion.button>
@@ -72,7 +78,11 @@ export default function Navbar() {
           </div>
 
           {/* Mobile toggle */}
-          <button className="md:hidden text-slate-700" onClick={() => setOpen(true)} aria-label="Open menu">
+          <button
+            className={`md:hidden transition-colors ${scrolled ? 'text-slate-700' : 'text-white'}`}
+            onClick={() => setOpen(true)}
+            aria-label="Open menu"
+          >
             <List size={28} weight="regular" />
           </button>
         </div>
